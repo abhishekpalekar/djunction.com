@@ -1,0 +1,477 @@
+@import url('"https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito+Sans:400,600,700|Poppins:400,500,600&display=swap" rel="stylesheet"');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgb(255, 255, 255) url('image/Preloader_9.gif') no-repeat center center;
+  z-index: 99999;
+}
+
+html {
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none !important;
+  font-size: 27px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Poppins', ;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  position: fixed;
+  z-index: 1;
+  right: 15px;
+  top: 15px;
+  font-family: 'Poppins', ;
+  border-radius: 9px;
+}
+
+.openbtn:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ********************HOME******************** */
+section#home .container {
+  overflow: hidden;
+}
+
+section#home {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url('image/kelly2-sikkema-tk9RQCq5eQo-unsplash.jpg');
+  position: relative;
+}
+
+section#home #main {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  margin-left: 100px;
+}
+
+section#home .logo {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 25px;
+  background-image: linear-gradient(45deg, #ff2d2d, #ffe926);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+}
+
+section#home p {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 0 !important;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+section#home p:hover {
+  background: rgba(255, 255, 255, 0.144);
+}
+
+section#home h1 {
+  font-size: 80px;
+  font-weight: bold;
+  position: relative;
+  background-image: linear-gradient(45deg, #e90707, #ffe926);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+}
+
+section#home h6 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 0;
+  font-weight: normal;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+section#home h6 span {
+  color: #ff8d02;
+  font-weight: bold;
+}
+
+section#home .signup {
+  font-size: 15px;
+  padding: 5px 15px;
+  background: transparent;
+  color: white;
+  border: 1px;
+  box-shadow: 0px 0px 6px white;
+  float: right;
+  margin: 23px 90px 0 0px;
+  border-radius: 20px;
+}
+
+section#home .signup:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+section#home .social-icons a {
+  color: white;
+  font-size: 15px;
+  padding-right: 20px;
+}
+
+section#home .social-icons a:hover {
+  /* color:rgba(209, 209, 209, 0.24) !important; */
+  color: #ff8d02;
+}
+
+/* ********************ABOUT******************** */
+
+section#about {
+  background-image: linear-gradient(45deg, #09042b, #4b56f0);
+  padding-top: 54px;
+  color: white;
+  font-family: 'Montserrat', ;
+}
+
+section#about img {
+  width: 510px;
+  height: 410px;
+  padding-top: 40px;
+}
+
+section#about h3 {
+  position: relative;
+  width: 42%;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+section#about h3::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+section#about p {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(212, 212, 212);
+}
+
+section#about .row p,
+.abt-txt p {
+  font-size: 15px;
+}
+
+section#about h5 {
+  font-weight: bold;
+}
+
+section#about .abt .abt-icons {
+  margin: 8px 20px 0 0;
+  color: rgb(173, 173, 173);
+}
+
+/* ********************SERVICES******************** */
+section#services {
+  background-image: linear-gradient(45deg, #09042b, #4b56f0);
+  color: rgb(255, 255, 255);
+}
+
+section#services h3 {
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  padding: 20px 0 5px 0;
+}
+
+section#services h5 {
+  font-weight: bold;
+}
+
+section#services .serv p {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(212, 212, 212);
+}
+
+section#services .form-control {
+  border-radius: 20px 0 0 20px;
+}
+
+section#services .btn {
+  border-radius: 0 20px 20px 0;
+}
+
+section#services .update h5 {
+  padding: 15px 0 15px 0;
+}
+
+/* ********************OUR BLOG******************** */
+
+section#ourblog {
+  background-image: linear-gradient(45deg, #09042b, #4b56f0);
+  min-height: 100vh;
+  font-family: 'Poppins', ;
+}
+
+section#ourblog h4 {
+  font-size: 27px;
+  font-weight: bold;
+  font-family: 'Montserrat', ;
+}
+
+section#ourblog .text {
+  color: rgb(212, 212, 212) !important;
+}
+
+section#ourblog .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#ourblog .container .box {
+  position: relative;
+  width: 250px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.548);
+  border-radius: 4px;
+  margin: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+section#ourblog .container .box:before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+section#ourblog .container .box .icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 1s;
+}
+
+section#ourblog .container .box:nth-child(1) .icon {
+  box-shadow: 0 0 0 0 #e91e63;
+  background: #e91e63;
+}
+
+section#ourblog .container .box:nth-child(1):hover .icon {
+  box-shadow: 0 0 0 400px #e91e63;
+}
+
+section#ourblog .container .box:nth-child(2) .icon {
+  box-shadow: 0 0 0 0 #23e629;
+  background: #23e629;
+}
+
+section#ourblog .container .box:nth-child(2):hover .icon {
+  box-shadow: 0 0 0 400px #23e629;
+}
+
+section#ourblog .container .box:nth-child(3) .icon {
+  box-shadow: 0 0 0 0 #2196f3;
+  background: #2196f3;
+}
+
+section#ourblog .container .box:nth-child(3):hover .icon {
+  box-shadow: 0 0 0 400px #2196f3;
+}
+
+section#ourblog .container .box:nth-child(4) .icon {
+  box-shadow: 0 0 0 0 #f8d123;
+  background: #f8d123;
+}
+
+section#ourblog .container .box:nth-child(4):hover .icon {
+  box-shadow: 0 0 0 400px #f8d123;
+}
+
+section#ourblog .container .box .content {
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+section#ourblog .container .box:hover .content {
+  color: #fff;
+}
+
+section#ourblog .container .box .content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+section#ourblog .container .box .content p {
+  margin: 0;
+  padding: 0;
+}
+
+section#ourblog a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(214, 214, 214);
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+/* ********************CONTACT******************** */
+
+section#contact {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)), url('image/img-75.jpg');
+}
+
+section#contact .container {
+  display: flex;
+  justify-content: center;
+}
+
+section#contact .footer-text {
+  color: white;
+  font-family: 'Poppins',  !important;
+}
+
+section#contact h4 {
+  font-size:28px;
+}
+
+section#contact .block1 {
+  display: grid;
+  justify-content: start;
+  padding-left: 40px;
+}
+
+section#contact .block1 a {
+  text-decoration: none;
+  color: white;
+}
+
+section#contact .block2 {
+  display: flex;
+  justify-content: center;
+}
+
+section#contact .block3 {
+  display: grid;
+  justify-content: end;
+  padding-right: 40px;
+}
+
+section#contact .contact-icons a {
+  padding-right: 15px;
+  color: white;
+}
+
+section#contact .btn {
+  background: linear-gradient(to right, #e90707, #ff9a26);
+  border: none;
+  color: none;
+}
+
